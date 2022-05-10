@@ -27,6 +27,11 @@ declare namespace Pool {
         connectionLimit?: number;
 
         /**
+         * Connection lifetime. If you set a wait_timeout as smaller like 10 seconds, you can set this option to prevent close socket by server. (Default: 0)
+         */
+        connectionTimeout?: number;
+
+        /**
          * The maximum number of connection requests the pool will queue before returning an error from getConnection. If set to 0, there
          * is no limit to the number of queued connection requests. (Default: 0)
          */

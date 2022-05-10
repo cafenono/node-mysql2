@@ -1,6 +1,6 @@
 {
-  "name": "mysql2",
-  "version": "2.3.3",
+  "name": "@cafenono/mysql2",
+  "version": "2.3.3-r10",
   "description": "fast mysql driver. Implements core protocol, prepared statements, ssl and compression in native JS",
   "main": "index.js",
   "directories": {
@@ -27,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sidorares/node-mysql2"
+    "url": "git+https://github.com/cafenono/node-mysql2.git"
   },
   "keywords": [
     "mysql",

@@ -221,7 +221,7 @@ declare namespace Connection {
          * You can also connect to a MySQL server without properly providing the appropriate CA to trust. You should not do this.
          */
         rejectUnauthorized?: boolean;
-      
+
         /**
          * Configure the minimum supported version of SSL, the default is TLSv1.2.
          */
@@ -256,7 +256,11 @@ declare class Connection extends EventEmitter {
 
     destroy(): void;
 
+    close(): void;
+
     pause(): void;
+
+    ping(): void;
 
     resume(): void;
 
