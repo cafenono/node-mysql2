@@ -320,7 +320,7 @@ class PromisePool extends EventEmitter {
     super();
     this.pool = pool;
     this.Promise = thePromise || Promise;
-    inheritEvents(pool, this, ['acquire', 'connection', 'enqueue', 'release']);
+    inheritEvents(pool, this, ['acquire', 'connection', 'enqueue', 'release', 'purge']);
   }
 
   getConnection() {
@@ -433,7 +433,7 @@ class PromisePoolCluster extends EventEmitter {
     super();
     this.poolCluster = poolCluster;
     this.Promise = thePromise || Promise;
-    inheritEvents(poolCluster, this, ['acquire', 'connection', 'enqueue', 'release']);
+    inheritEvents(poolCluster, this, ['acquire', 'connection', 'enqueue', 'release', 'purge']);
   }
 
   getConnection() {

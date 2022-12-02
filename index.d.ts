@@ -148,6 +148,7 @@ export interface Pool extends mysql.Connection {
   on(event: 'acquire', listener: (connection: PoolConnection) => any): this;
   on(event: 'release', listener: (connection: PoolConnection) => any): this;
   on(event: 'enqueue', listener: () => any): this;
+  on(event: 'purge', listener: () => any): this;
   promise(promiseImpl?: PromiseConstructor): PromisePool;
 }
 
